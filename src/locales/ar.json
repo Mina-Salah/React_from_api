@@ -1,0 +1,97 @@
+{
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "error": "حدث خطأ",
+    "success": "تم بنجاح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق"
+  },
+  "auth": {
+    "login": {
+      "title": "تسجيل الدخول",
+      "subtitle": "أدخل بياناتك للمتابعة",
+      "civilId": "الرقم المدني",
+      "civilIdPlaceholder": "أدخل الرقم المدني (12 رقم)",
+      "rememberMe": "تذكرني",
+      "submit": "تسجيل الدخول",
+      "loading": "جارٍ تسجيل الدخول...",
+      "noAccount": "ليس لديك حساب؟",
+      "createAccount": "إنشاء حساب",
+      "errors": {
+        "civilIdRequired": "يرجى إدخال الرقم المدني",
+        "civilIdExists": "الرقم المدني مسجل مسبقاً",
+        "civilIdInvalid": "الرقم المدني يجب أن يحتوي على 12 رقماً فقط",
+        "loginFailed": "فشل تسجيل الدخول، حاول مرة أخرى"
+      }
+    },
+    "register": {
+      "title": "إنشاء حساب جديد",
+      "subtitle": "املأ البيانات التالية",
+      "civilId": "الرقم المدني",
+      "dateOfBirth": "تاريخ الميلاد",
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "email": "البريد الإلكتروني",
+      "phoneNumber": "رقم الهاتف",
+      "gender": "النوع",
+      "male": "ذكر",
+      "female": "أنثى",
+      "submit": "إنشاء حساب",
+      "loading": "جارٍ التسجيل...",
+      "hasAccount": "لديك حساب؟",
+      "loginLink": "تسجيل الدخول",
+      "success": "تم التسجيل بنجاح! سيتم تحويلك...",
+      "errors": {
+        "civilIdRequired": "الرقم المدني مطلوب",
+        "civilIdInvalid": "الرقم المدني يجب أن يحتوي على 12 رقماً فقط",
+        "dateOfBirthRequired": "تاريخ الميلاد مطلوب",
+        "firstNameRequired": "الاسم الأول مطلوب",
+        "lastNameRequired": "اسم العائلة مطلوب",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailInvalid": "الرجاء إدخال بريد إلكتروني صالح",
+        "phoneRequired": "رقم الهاتف مطلوب",
+        "phoneInvalid": "رقم الهاتف يجب أن يحتوي على أرقام فقط (8 إلى 15 رقم)",
+        "registerFailed": "حدث خطأ أثناء التسجيل. يرجى المحاولة مرة أخرى"
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "مرحباً، {{name}}!",
+    "subtitle": "نتمنى لك يوماً سعيداً",
+    "familyStatus": "الحالة العائلية",
+    "noData": "لا توجد بيانات لعرضها",
+    "loadingData": "جارٍ تحميل البيانات...",
+    "errorLoading": "حدث خطأ أثناء تحميل الحالة العائلية",
+    "retry": "إعادة المحاولة"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "subtitle": "معلومات الحساب",
+    "email": "البريد الإلكتروني",
+    "fullName": "الاسم الكامل",
+    "userId": "رقم المستخدم",
+    "roles": "الأدوار",
+    "noRoles": "لا توجد أدوار",
+    "backToDashboard": "العودة للرئيسية",
+    "logout": "تسجيل الخروج",
+    "additionalInfo": "معلومات إضافية",
+    "accountActive": "حسابك مُفعّل ويمكنك الوصول لجميع المميزات",
+    "adminAccess": "لديك صلاحيات الأدمن - يمكنك إدارة النظام",
+    "joinDate": "تاريخ الانضمام"
+  },
+  "layout": {
+    "home": "الرئيسية",
+    "profile": "الملف الشخصي",
+    "settings": "الإعدادات",
+    "categories": "الفئات",
+    "products": "المنتجات",
+    "logout": "تسجيل الخروج",
+    "language": {
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
+}

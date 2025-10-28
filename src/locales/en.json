@@ -1,0 +1,96 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Enter your credentials to continue",
+      "civilId": "Civil ID",
+      "civilIdPlaceholder": "Enter your Civil ID (12 digits)",
+      "rememberMe": "Remember me",
+      "submit": "Login",
+      "loading": "Logging in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create Account",
+      "errors": {
+        "civilIdRequired": "Please enter your Civil ID",
+        "civilIdInvalid": "Civil ID must contain exactly 12 digits",
+        "loginFailed": "Login failed, please try again"
+      }
+    },
+    "register": {
+      "title": "Create New Account",
+      "subtitle": "Fill in the details below",
+      "civilId": "Civil ID",
+      "dateOfBirth": "Date of Birth",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phoneNumber": "Phone Number",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "submit": "Create Account",
+      "loading": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Login",
+      "success": "Registration successful! Redirecting...",
+      "errors": {
+        "civilIdRequired": "Civil ID is required",
+        "civilIdInvalid": "Civil ID must contain exactly 12 digits",
+        "dateOfBirthRequired": "Date of birth is required",
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailRequired": "Email address is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Phone number must contain only digits (8 to 15 digits)",
+        "registerFailed": "Registration failed. Please try again"
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome, {{name}}!",
+    "subtitle": "Have a great day",
+    "familyStatus": "Family Status",
+    "noData": "No data to display",
+    "loadingData": "Loading data...",
+    "errorLoading": "Error loading family status",
+    "retry": "Retry"
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Account Information",
+    "email": "Email Address",
+    "fullName": "Full Name",
+    "userId": "User ID",
+    "roles": "Roles",
+    "noRoles": "No roles assigned",
+    "backToDashboard": "Back to Dashboard",
+    "logout": "Logout",
+    "additionalInfo": "Additional Information",
+    "accountActive": "Your account is active and you have access to all features",
+    "adminAccess": "You have admin privileges - you can manage the system",
+    "joinDate": "Join Date"
+  },
+  "layout": {
+    "home": "Home",
+    "profile": "Profile",
+    "settings": "Settings",
+    "categories": "Categories",
+    "products": "Products",
+    "logout": "Logout",
+    "language": {
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
+}
