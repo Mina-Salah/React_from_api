@@ -110,20 +110,72 @@ export const authService = {
         `${ENDPOINTS.AUTH.LOGIN}?Patient=true`,
         credentials
       );
+
       console.log("✅ نجح تسجيل الدخول:", response.data);
+
       return { success: true, data: response.data };
     } catch (error) {
       console.error("❌ خطأ في تسجيل الدخول:", error);
-      const errorMessage =
-        error.response?.data?.message ||
-        error.response?.data?.Message ||
-        error.response?.data ||
-        "فشل تسجيل الدخول";
+
+      const status = error.response?.status;
+      const errorData = error.response?.data;
+
+      let errorMessage = "فشل تسجيل الدخول";
+
+      // ✅ معالجة حالة المستخدم غير موجود (404 أو 401)
+      if (status === 404) {
+        errorMessage = "الرقم المدني غير مسجل. يرجى التسجيل أولاً";
+      }
+      // ✅ معالجة كلمة مرور خاطئة أو بيانات خاطئة
+      else if (status === 401) {
+        const msg = errorData?.message || errorData?.Message || "";
+
+        // التحقق إذا كانت الرسالة تشير لعدم وجود المستخدم
+        if (
+          msg.toLowerCase().includes("not found") ||
+          msg.toLowerCase().includes("not exist") ||
+          msg.includes("غير موجود") ||
+          msg.includes("لا يوجد")
+        ) {
+          errorMessage = "الرقم المدني غير مسجل. يرجى التسجيل أولاً";
+        } else {
+          errorMessage = "كلمة المرور غير صحيحة";
+        }
+      }
+      // معالجة خطأ البيانات
+      else if (status === 400) {
+        const msg = errorData?.message || errorData?.Message || "";
+
+        if (
+          msg.toLowerCase().includes("not found") ||
+          msg.toLowerCase().includes("not exist") ||
+          msg.includes("غير موجود")
+        ) {
+          errorMessage = "الرقم المدني غير مسجل. يرجى التسجيل أولاً";
+        } else {
+          errorMessage = msg || "البيانات المدخلة غير صحيحة";
+        }
+      }
+      // خطأ السيرفر
+      else if (status === 500) {
+        errorMessage = "خطأ في السيرفر، يرجى المحاولة لاحقاً";
+      }
+      // محاولة استخراج أي رسالة من الخادم
+      else if (errorData) {
+        const msg =
+          errorData.message || errorData.Message || errorData.title || "";
+
+        if (typeof msg === "string" && msg) {
+          errorMessage = msg;
+        }
+      }
+
+      console.log("📝 رسالة خطأ تسجيل الدخول:", errorMessage);
+
       return {
         success: false,
-        error:
-          typeof errorMessage === "string" ? errorMessage : "فشل تسجيل الدخول",
-        statusCode: error.response?.status,
+        error: errorMessage,
+        statusCode: status,
       };
     }
   },
